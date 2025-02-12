@@ -1,0 +1,65 @@
+{
+    "name": "Quarterly with textual enumeration",
+    "description": "Quarterly publication (one issue every three months) with month in the label using a textual enumeration",
+    "exampleLabel": "March 2023",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "month"
+            },
+            "period": "3",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": "2",
+                    "patternType": "month_date"
+                }
+            ],
+            "issues": "1"
+        },
+        "patternType": "month_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "templateMetadataRuleType": "enumeration",
+                    "ruleType": {
+                        "templateMetadataRuleFormat": "enumeration_textual",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "value": "March",
+                                    "index": 0
+                                },
+                                {
+                                    "units": "1",
+                                    "value": "June",
+                                    "index": 1
+                                },
+                                {
+                                    "units": "1",
+                                    "value": "September",
+                                    "index": 2
+                                },
+                                {
+                                    "units": "1",
+                                    "value": "December",
+                                    "index": 3
+                                }
+                            ],
+                            "refdataCategory": "Global.Month"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "templateString": "{{enumeration1}}"
+        }
+    }
+}

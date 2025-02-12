@@ -1,0 +1,67 @@
+{
+    "name": "Monthly with Volume",
+    "description": "Pattern for a monthly publication labelled with the volume number and year",
+    "exampleLabel": "Vol. 56, 2023",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "month_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "ruleType": {
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleLocale": "en",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        }
+                    },
+                    "templateMetadataRuleType": "chronology",
+                    "index": 0
+                },
+                {
+                    "templateMetadataRuleType": "enumeration",
+                    "ruleType": {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        }
+                    },
+                    "index": 1
+                }
+            ],
+            "templateString": "Vol. {{enumeration1.level1}}, {{chronology1.year}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "issues": 1,
+            "period": 1,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": 1
+                    },
+                    "patternType": "month_date",
+                    "ordinal": 1
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "<<Name>>",
+    "description": "<<Description>>",
+    "exampleLabel": "<<example label>>",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "<<pattern type>>",
+        "templateConfig": {
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "<<enumeration_numeric or enumeration_textual>>",
+                    "ruleFormat": {
+                        "levels": [
+                            
+                        ]
+                    },
+                    "index": 0
+                }
+            ],
+            "chronologyRules": [
+                {
+                    "ruleLocale": "<<locale code e.g. en, fr>>",
+                    "templateMetadataRuleFormat": "<<chronology_day,chronology_month or chronology_year>>",
+                    "ruleFormat": {
+                    },
+                    "index": 0
+                }
+            ],
+            "templateString": "<<template>>"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "issues": <<integer: issues per period>>,
+            "period": <<integer: number of units in period>>,
+            "timeUnit": {
+                "value": "<<day, week, month, year>>"
+            },
+            "rules": [
+                {
+                }
+            ]
+        }
+    }
+}

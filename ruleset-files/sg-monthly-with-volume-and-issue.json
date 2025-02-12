@@ -1,0 +1,80 @@
+{
+    "name": "Monthly with Volume and Issue",
+    "description": "Pattern for a monthly publication labelled with the volume number, issue number, month and year",
+    "exampleLabel": "Vol. 56: October 2023: Issue 10",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "month_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "ruleType": {
+                        "templateMetadataRuleFormat": "chronology_month",
+                        "ruleLocale": "en",
+                        "ruleFormat": {
+                            "monthFormat": {
+                                "value": "full"
+                            },
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        }
+                    },
+                    "templateMetadataRuleType": "chronology",
+                    "index": 0
+                },
+                {
+                    "ruleType": {
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "units": 1,
+                                    "index": 0
+                                },
+                                {
+                                    "units": "12",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "reset"
+                                    },
+                                    "index": 1
+                                }
+                            ]
+                        },
+                        "templateMetadataRuleFormat": "enumeration_numeric"
+                    },
+                    "templateMetadataRuleType": "enumeration",
+                    "index": 1
+                }
+            ],
+            "templateString": "Vol. {{enumeration1.level1}}: {{chronology1.month}} {{chronology1.year}}: Issue {{enumeration1.level2}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "issues": 1,
+            "period": 1,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": 1
+                    },
+                    "patternType": "month_date",
+                    "ordinal": 1
+                }
+            ]
+        }
+    }
+}

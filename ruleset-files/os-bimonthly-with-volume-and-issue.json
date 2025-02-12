@@ -1,0 +1,89 @@
+{
+    "name": "Bi-monthly with French and English Chronologies, volume and issue",
+    "description": "Pattern for a bi-monthly publication (one issue every two months) with both french and english month names and volume and issue numbers",
+    "exampleLabel": "Vol. 13, 2023: 1 January / janvier",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "month_date",
+        "templateConfig": {
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            },
+                            {
+                                "units": "6",
+                                "format": {
+                                    "value": "roman"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 1
+                            }
+                        ]
+                    },
+                    "index": 0
+                }
+            ],
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
+                        },
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                },
+                {
+                    "ruleLocale": "fr",
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
+                        },
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 1
+                }
+            ],
+            "templateString": "Vol. {{enumeration1.level1}}, {{chronology1.year}}: Issue {{enumeration1.level2}}  {{chronology1.month}} / {{chronology2.month}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "issues": 1,
+            "period": 2,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": 1
+                    },
+                    "patternType": "month_date",
+                    "ordinal": 2
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,580 @@
+[
+    {
+        "ruleset": {
+            "name": "Bi-monthly with issue",
+            "description": "Pattern for a bi-monthly publication (one issue every two months)",
+            "exampleLabel": "2023. 5",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                },
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleLocale": "en"
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        },
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "levels": [
+                                        {
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "reset"
+                                            },
+                                            "index": 0,
+                                            "units": "6"
+                                        }
+                                    ]
+                                },
+                                "templateMetadataRuleFormat": "enumeration_numeric"
+                            },
+                            "templateMetadataRuleType": "enumeration",
+                            "index": 1
+                        }
+                    ],
+                    "templateString": "{{chronology1.year}}. {{enumeration1.level1}} "
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": "2",
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": "2"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Monthly without July/August",
+            "description": "Pattern for a monthly publication with July and August omitted",
+            "exampleLabel": "October 2023",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleLocale": "en",
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                }
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        }
+                    ],
+                    "templateString": "{{chronology1.month}} {{chronology1.year}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": 1,
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": 1
+                        }
+                    ]
+                },
+                "omission": {
+                    "rules": [
+                        {
+                            "timeUnit": {
+                                "value": "month"
+                            },
+                            "patternType": "month",
+                            "pattern": {
+                                "monthFrom": {
+                                    "value": "july"
+                                },
+                                "isRange": true,
+                                "monthTo": {
+                                    "value": "august"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Monthly",
+            "description": "Pattern for a monthly publication labelled with the month and year",
+            "exampleLabel": "October 2023",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "period": "1",
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": "1"
+                            },
+                            "ordinal": 1,
+                            "patternType": "month_date"
+                        }
+                    ],
+                    "issues": "1"
+                },
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "templateMetadataRuleType": "chronology",
+                            "ruleType": {
+                                "ruleLocale": "en",
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                }
+                            },
+                            "index": 0
+                        }
+                    ],
+                    "templateString": "{{chronology1.month}} {{chronology1.year}}"
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Monthly with Volume and Issue",
+            "description": "Pattern for a monthly publication labelled with the volume number, issue number, month and year",
+            "exampleLabel": "Vol. 56: October 2023: Issue 10",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleLocale": "en",
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                }
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        },
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "levels": [
+                                        {
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "continuous"
+                                            },
+                                            "units": 1,
+                                            "index": 0
+                                        },
+                                        {
+                                            "units": "12",
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "reset"
+                                            },
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                "templateMetadataRuleFormat": "enumeration_numeric"
+                            },
+                            "templateMetadataRuleType": "enumeration",
+                            "index": 1
+                        }
+                    ],
+                    "templateString": "Vol. {{enumeration1.level1}}: {{chronology1.month}} {{chronology1.year}}: Issue {{enumeration1.level2}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": 1,
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Semi-annual",
+            "description": "Pattern for a semi-annual (aka twice yearly) publication (one issue every six months)",
+            "exampleLabel": "2023, December",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "year_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                },
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleLocale": "en"
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        }
+                    ],
+                    "templateString": "{{chronology1.year}}, {{chronology1.month}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "timeUnit": {
+                        "value": "year"
+                    },
+                    "period": "1",
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": "1",
+                                "month": {
+                                    "value": "june"
+                                }
+                            },
+                            "ordinal": 1,
+                            "patternType": "year_date"
+                        },
+                        {
+                            "pattern": {
+                                "day": "1",
+                                "month": {
+                                    "value": "december"
+                                }
+                            },
+                            "ordinal": 1,
+                            "patternType": "year_date"
+                        }
+                    ],
+                    "issues": "2"
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Monthly with Volume",
+            "description": "Pattern for a monthly publication labelled with the volume number and year",
+            "exampleLabel": "Vol. 56, 2023",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "chronology_year",
+                                "ruleLocale": "en",
+                                "ruleFormat": {
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                }
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        },
+                        {
+                            "templateMetadataRuleType": "enumeration",
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "enumeration_numeric",
+                                "ruleFormat": {
+                                    "levels": [
+                                        {
+                                            "units": "1",
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "continuous"
+                                            },
+                                            "index": 0
+                                        }
+                                    ]
+                                }
+                            },
+                            "index": 1
+                        }
+                    ],
+                    "templateString": "Vol. {{enumeration1.level1}}, {{chronology1.year}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": 1,
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Bi-monthly with volume and issue",
+            "description": "Pattern for a bi-monthly publication (one issue every two months) with volume and issue numbers",
+            "exampleLabel": "Vol. 13, 2023: 5",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "monthFormat": {
+                                        "value": "full"
+                                    },
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                },
+                                "templateMetadataRuleFormat": "chronology_month",
+                                "ruleLocale": "en"
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        },
+                        {
+                            "ruleType": {
+                                "ruleFormat": {
+                                    "levels": [
+                                        {
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "continuous"
+                                            },
+                                            "index": 0,
+                                            "units": "1"
+                                        },
+                                        {
+                                            "units": "6",
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "reset"
+                                            },
+                                            "index": 1
+                                        }
+                                    ]
+                                },
+                                "templateMetadataRuleFormat": "enumeration_numeric"
+                            },
+                            "templateMetadataRuleType": "enumeration",
+                            "index": 1
+                        }
+                    ],
+                    "templateString": "Vol. {{enumeration1.level1}}, {{chronology1.year}}: Issue {{enumeration1.level2}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": 2,
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": 2
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Quarterly with Month",
+            "description": "Pattern for a quarterly publication (one issue every three months / four times a year) with month in the label",
+            "exampleLabel": "2023. January",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {}
+        }
+    },
+    {
+        "ruleset": {
+            "name": "Monthly Volume. Year: Issue",
+            "description": "Pattern for a monthly publication labelled with Volume. Year: Issue",
+            "exampleLabel": "53. 2025:3",
+            "modelRulesetStatus": "Active",
+            "serialRuleset": {
+                "patternType": "month_date",
+                "templateConfig": {
+                    "rules": [
+                        {
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "chronology_year",
+                                "ruleLocale": "en",
+                                "ruleFormat": {
+                                    "yearFormat": {
+                                        "value": "full"
+                                    }
+                                }
+                            },
+                            "templateMetadataRuleType": "chronology",
+                            "index": 0
+                        },
+                        {
+                            "templateMetadataRuleType": "enumeration",
+                            "ruleType": {
+                                "templateMetadataRuleFormat": "enumeration_numeric",
+                                "ruleFormat": {
+                                    "levels": [
+                                        {
+                                            "units": "1",
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "continuous"
+                                            },
+                                            "index": 0
+                                        },
+                                        {
+                                            "units": "12",
+                                            "format": {
+                                                "value": "number"
+                                            },
+                                            "sequence": {
+                                                "value": "reset"
+                                            },
+                                            "index": 1
+                                        }
+                                    ]
+                                }
+                            },
+                            "index": 1
+                        }
+                    ],
+                    "templateString": "{{enumeration1.level1}}. {{chronology1.year}}: {{enumeration1.level2}}"
+                },
+                "rulesetStatus": {
+                    "value": "active"
+                },
+                "recurrence": {
+                    "issues": 1,
+                    "period": 1,
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "rules": [
+                        {
+                            "pattern": {
+                                "day": 1
+                            },
+                            "patternType": "month_date",
+                            "ordinal": 1
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]

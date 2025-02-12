@@ -1,0 +1,49 @@
+{
+    "name": "Monthly",
+    "description": "Pattern for a monthly publication labelled with the month and year",
+    "exampleLabel": "October 2023",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "month"
+            },
+            "period": "1",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": 1,
+                    "patternType": "month_date"
+                }
+            ],
+            "issues": "1"
+        },
+        "patternType": "month_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "templateMetadataRuleType": "chronology",
+                    "ruleType": {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_month",
+                        "ruleFormat": {
+                            "monthFormat": {
+                                "value": "full"
+                            },
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.month}} {{chronology1.year}}"
+        }
+    }
+}

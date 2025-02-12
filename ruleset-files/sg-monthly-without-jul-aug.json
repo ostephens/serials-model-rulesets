@@ -1,0 +1,68 @@
+{
+    "name": "Monthly without July/August",
+    "description": "Pattern for a monthly publication with July and August omitted",
+    "exampleLabel": "October 2023",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "month_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "ruleType": {
+                        "templateMetadataRuleFormat": "chronology_month",
+                        "ruleLocale": "en",
+                        "ruleFormat": {
+                            "monthFormat": {
+                                "value": "full"
+                            },
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        }
+                    },
+                    "templateMetadataRuleType": "chronology",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.month}} {{chronology1.year}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "issues": 1,
+            "period": 1,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": 1
+                    },
+                    "patternType": "month_date",
+                    "ordinal": 1
+                }
+            ]
+        },
+        "omission": {
+            "rules": [
+                {
+                    "timeUnit": {
+                        "value": "month"
+                    },
+                    "patternType": "month",
+                    "pattern": {
+                        "monthFrom": {
+                            "value": "july"
+                        },
+                        "isRange": true,
+                        "monthTo": {
+                            "value": "august"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

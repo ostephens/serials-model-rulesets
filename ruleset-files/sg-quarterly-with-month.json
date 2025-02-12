@@ -1,0 +1,9 @@
+{
+    "name": "Quarterly with Month",
+    "description": "Pattern for a quarterly publication (one issue every three months / four times a year) with month in the label",
+    "exampleLabel": "2023. January",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+    
+    }
+}

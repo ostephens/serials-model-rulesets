@@ -1,0 +1,62 @@
+{
+    "name": "Semi-annual",
+    "description": "Pattern for a semi-annual (aka twice yearly) publication (one issue every six months)",
+    "exampleLabel": "2023, December",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "year_date",
+        "templateConfig": {
+            "rules": [
+                {
+                    "ruleType": {
+                        "ruleFormat": {
+                            "monthFormat": {
+                                "value": "full"
+                            },
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "templateMetadataRuleFormat": "chronology_month",
+                        "ruleLocale": "en"
+                    },
+                    "templateMetadataRuleType": "chronology",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}, {{chronology1.month}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "year"
+            },
+            "period": "1",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1",
+                        "month": {
+                            "value": "june"
+                        }
+                    },
+                    "ordinal": 1,
+                    "patternType": "year_date"
+                },
+                {
+                    "pattern": {
+                        "day": "1",
+                        "month": {
+                            "value": "december"
+                        }
+                    },
+                    "ordinal": 1,
+                    "patternType": "year_date"
+                }
+            ],
+            "issues": "2"
+        }
+    }
+}
