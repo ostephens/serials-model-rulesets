@@ -1,4 +1,5 @@
 # README
+
 This repository contains some common serial publication patterns expressed as model rulesets that can be loaded into the FOLIO Serials Management application.
 
 To load a file, POST the content of the file to the /serials-management/modelRulesets endpoint
