@@ -1,0 +1,80 @@
+{
+    "name": "zweimal pro Monat - Jahr / Band / Nummer: 24 Hefte pro Jahr",
+    "description": "24x im Jahr, drei Stufen",
+    "exampleLabel": "2025/45/1",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "enumerationRules": [
+                {
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "units": 1,
+                                "index": 0
+                            },
+                            {
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 1,
+                                "units": "24"
+                            }
+                        ]
+                    },
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}/{{enumeration1.level2}}"
+        },
+        "recurrence": {
+            "issues": "2",
+            "period": 1,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": 1,
+                    "patternType": "month_date"
+                },
+                {
+                    "pattern": {
+                        "day": "15"
+                    },
+                    "ordinal": 1,
+                    "patternType": "month_date"
+                }
+            ]
+        },
+        "patternType": "month_date"
+    }
+}

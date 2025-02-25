@@ -1,0 +1,66 @@
+{
+    "name": "dreijährlich - Jahr / Nummer: 1 x in drei Jahren ",
+    "description": "1x alle 3 Jahre, zwei Stufen",
+    "exampleLabel": "2025/45",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "year_date",
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleLocale": "en",
+                    "index": 0
+                }
+            ],
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            }
+                        ]
+                    },
+                    "index": 1
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "year"
+            },
+            "period": "3",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1",
+                        "month": {
+                            "value": "january"
+                        }
+                    },
+                    "ordinal": 1,
+                    "patternType": "year_date"
+                }
+            ],
+            "issues": "1"
+        }
+    }
+}

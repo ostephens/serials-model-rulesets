@@ -1,0 +1,63 @@
+{
+    "name": "vierteljährlich - Jahr / Band: 4 Hefte pro Jahr",
+    "description": "4x im Jahr, zwei Stufen",
+    "exampleLabel": "2025/45",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "enumerationRules": [
+                {
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "units": 1,
+                                "index": 0
+                            }
+                        ]
+                    },
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "month"
+            },
+            "period": "3",
+            "issues": "1",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": "1",
+                    "patternType": "month_date"
+                }
+            ]
+        },
+        "patternType": "month_date"
+    }
+}

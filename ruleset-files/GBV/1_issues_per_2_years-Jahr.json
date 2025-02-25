@@ -1,0 +1,46 @@
+{
+    "name": "zweijährlich - Jahr: 1 x in zwei Jahren",
+    "description": "1x alle 2 Jahre, eine Stufe",
+    "exampleLabel": "2025",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "year_date",
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleLocale": "en",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "year"
+            },
+            "period": "2",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1",
+                        "month": {
+                            "value": "january"
+                        }
+                    },
+                    "ordinal": 1,
+                    "patternType": "year_date"
+                }
+            ],
+            "issues": "1"
+        }
+    }
+}

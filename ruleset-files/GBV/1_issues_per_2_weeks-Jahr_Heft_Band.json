@@ -1,0 +1,75 @@
+{
+    "name": "vierzehntäglich - Jahr / Band / Nummer: 26 Hefte pro Jahr",
+    "description": "26x im Jahr, drei Stufen",
+    "exampleLabel": "2025/45/1",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "week"
+            },
+            "period": "2",
+            "issues": "1",
+            "rules": [
+                {
+                    "pattern": {
+                        "weekday": {
+                            "value": "monday"
+                        }
+                    },
+                    "ordinal": "1",
+                    "patternType": "week"
+                }
+            ]
+        },
+        "patternType": "week",
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}/{{enumeration1.level2}}",
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            },
+                            {
+                                "units": "26",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 1
+                            }
+                        ]
+                    },
+                    "index": 0
+                }
+            ]
+        }
+    }
+}

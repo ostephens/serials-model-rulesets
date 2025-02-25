@@ -1,0 +1,63 @@
+{
+    "name": "monatlich - Jahr / Band: 12 Hefte pro Jahr",
+    "description": "12x im Jahr, zwei Stufen",
+    "exampleLabel": "2025/45",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "patternType": "month_date",
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleLocale": "en",
+                    "index": 0
+                }
+            ],
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            }
+                        ]
+                    },
+                    "index": 1
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+        },
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "month"
+            },
+            "period": "1",
+            "issues": "1",
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": "1",
+                    "patternType": "month_date"
+                }
+            ]
+        }
+    }
+}
