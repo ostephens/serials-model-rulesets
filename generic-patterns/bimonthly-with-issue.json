@@ -6,46 +6,42 @@
     "serialRuleset": {
         "patternType": "month_date",
         "templateConfig": {
-            "rules": [
+            "chronologyRules": [
                 {
-                    "ruleType": {
-                        "ruleFormat": {
-                            "monthFormat": {
-                                "value": "full"
-                            },
-                            "yearFormat": {
-                                "value": "full"
-                            }
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
                         },
-                        "templateMetadataRuleFormat": "chronology_month",
-                        "ruleLocale": "en"
+                        "yearFormat": {
+                            "value": "full"
+                        }
                     },
-                    "templateMetadataRuleType": "chronology",
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleLocale": "en",
                     "index": 0
-                },
+                }
+            ],
+            "enumerationRules": [
                 {
-                    "ruleType": {
-                        "ruleFormat": {
-                            "levels": [
-                                {
-                                    "format": {
-                                        "value": "number"
-                                    },
-                                    "sequence": {
-                                        "value": "reset"
-                                    },
-                                    "index": 0,
-                                    "units": "6"
-                                }
-                            ]
-                        },
-                        "templateMetadataRuleFormat": "enumeration_numeric"
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 0,
+                                "units": "6"
+                            }
+                        ]
                     },
-                    "templateMetadataRuleType": "enumeration",
+                    "templateMetadataRuleFormat": "enumeration_numeric",
                     "index": 1
                 }
             ],
-            "templateString": "{{chronology1.year}}. {{enumeration1.level1}} "
+            "templateString": "{{chronology1.year}}. {{enumeration1.level1}}"
         },
         "rulesetStatus": {
             "value": "active"

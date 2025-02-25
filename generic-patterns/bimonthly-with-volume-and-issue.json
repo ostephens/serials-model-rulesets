@@ -18,7 +18,6 @@
                     },
                     "templateMetadataRuleFormat": "chronology_month",
                     "ruleLocale": "en",
-                    "templateMetadataRuleType": "chronology",
                     "index": 0
                 }
             ],
@@ -49,7 +48,6 @@
                         ]
                     },
                     "templateMetadataRuleFormat": "enumeration_numeric",
-                    "templateMetadataRuleType": "enumeration",
                     "index": 1
                 }
             ],

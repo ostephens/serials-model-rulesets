@@ -6,21 +6,18 @@
     "serialRuleset": {
         "patternType": "month_date",
         "templateConfig": {
-            "rules": [
+            "chronologyRules": [
                 {
-                    "ruleType": {
-                        "templateMetadataRuleFormat": "chronology_month",
-                        "ruleLocale": "en",
-                        "ruleFormat": {
-                            "monthFormat": {
-                                "value": "full"
-                            },
-                            "yearFormat": {
-                                "value": "full"
-                            }
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleLocale": "en",
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
+                        },
+                        "yearFormat": {
+                            "value": "full"
                         }
                     },
-                    "templateMetadataRuleType": "chronology",
                     "index": 0
                 }
             ],

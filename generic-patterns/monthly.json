@@ -25,19 +25,16 @@
         },
         "patternType": "month_date",
         "templateConfig": {
-            "rules": [
+            "chronologyRules": [
                 {
-                    "templateMetadataRuleType": "chronology",
-                    "ruleType": {
-                        "ruleLocale": "en",
-                        "templateMetadataRuleFormat": "chronology_month",
-                        "ruleFormat": {
-                            "monthFormat": {
-                                "value": "full"
-                            },
-                            "yearFormat": {
-                                "value": "full"
-                            }
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
+                        },
+                        "yearFormat": {
+                            "value": "full"
                         }
                     },
                     "index": 0

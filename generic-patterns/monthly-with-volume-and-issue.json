@@ -6,52 +6,48 @@
     "serialRuleset": {
         "patternType": "month_date",
         "templateConfig": {
-            "rules": [
+            "chronologyRules": [
                 {
-                    "ruleType": {
-                        "templateMetadataRuleFormat": "chronology_month",
-                        "ruleLocale": "en",
-                        "ruleFormat": {
-                            "monthFormat": {
-                                "value": "full"
-                            },
-                            "yearFormat": {
-                                "value": "full"
-                            }
+                    "ruleFormat": {
+                        "monthFormat": {
+                            "value": "full"
+                        },
+                        "yearFormat": {
+                            "value": "full"
                         }
                     },
-                    "templateMetadataRuleType": "chronology",
-                    "index": 0
-                },
+                    "index": 0,
+                    "templateMetadataRuleFormat": "chronology_month",
+                    "ruleLocale": "en"
+                }
+            ],
+            "enumerationRules": [
                 {
-                    "ruleType": {
-                        "ruleFormat": {
-                            "levels": [
-                                {
-                                    "format": {
-                                        "value": "number"
-                                    },
-                                    "sequence": {
-                                        "value": "continuous"
-                                    },
-                                    "units": 1,
-                                    "index": 0
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "format": {
+                                    "value": "number"
                                 },
-                                {
-                                    "units": "12",
-                                    "format": {
-                                        "value": "number"
-                                    },
-                                    "sequence": {
-                                        "value": "reset"
-                                    },
-                                    "index": 1
-                                }
-                            ]
-                        },
-                        "templateMetadataRuleFormat": "enumeration_numeric"
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "units": 1,
+                                "index": 0
+                            },
+                            {
+                                "units": "12",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 1
+                            }
+                        ]
                     },
-                    "templateMetadataRuleType": "enumeration",
+                    "templateMetadataRuleFormat": "enumeration_numeric",
                     "index": 1
                 }
             ],

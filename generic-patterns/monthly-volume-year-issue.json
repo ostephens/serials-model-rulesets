@@ -6,48 +6,44 @@
     "serialRuleset": {
         "patternType": "month_date",
         "templateConfig": {
-            "rules": [
+            "chronologyRules": [
                 {
-                    "ruleType": {
-                        "templateMetadataRuleFormat": "chronology_year",
-                        "ruleLocale": "en",
-                        "ruleFormat": {
-                            "yearFormat": {
-                                "value": "full"
-                            }
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleLocale": "en",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
                         }
                     },
-                    "templateMetadataRuleType": "chronology",
                     "index": 0
-                },
+                }
+            ],
+            "enumerationRules": [
                 {
-                    "templateMetadataRuleType": "enumeration",
-                    "ruleType": {
-                        "templateMetadataRuleFormat": "enumeration_numeric",
-                        "ruleFormat": {
-                            "levels": [
-                                {
-                                    "units": "1",
-                                    "format": {
-                                        "value": "number"
-                                    },
-                                    "sequence": {
-                                        "value": "continuous"
-                                    },
-                                    "index": 0
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
                                 },
-                                {
-                                    "units": "12",
-                                    "format": {
-                                        "value": "number"
-                                    },
-                                    "sequence": {
-                                        "value": "reset"
-                                    },
-                                    "index": 1
-                                }
-                            ]
-                        }
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            },
+                            {
+                                "units": "12",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "reset"
+                                },
+                                "index": 1
+                            }
+                        ]
                     },
                     "index": 1
                 }
