@@ -1,7 +1,7 @@
 {
-    "name": "monatlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
-    "description": "2x im Jahr (halbjährlich), drei Stufen",
-    "exampleLabel": "2025/45/1",
+    "name": "monatlich - Jahr / Nummer: 2 Hefte pro Jahr",
+    "description": "2x im Jahr (halbjährlich), zwei Stufen",
+    "exampleLabel": "2025/45",
     "modelRulesetStatus": "Active",
     "serialRuleset": {
         "patternType": "year_date",
@@ -32,23 +32,13 @@
                                     "value": "continuous"
                                 },
                                 "index": 0
-                            },
-                            {
-                                "units": "2",
-                                "format": {
-                                    "value": "number"
-                                },
-                                "sequence": {
-                                    "value": "reset"
-                                },
-                                "index": 1
                             }
                         ]
                     },
                     "index": 1
                 }
             ],
-            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}/{{enumeration1.level2}}"
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
         },
         "rulesetStatus": {
             "value": "active"

@@ -1,0 +1,70 @@
+{
+    "name": "wöchentlich - Jahr / Nummer: 24 Hefte pro Jahr",
+    "description": "24x im Jahr (zweimal pro Monat), zwei Stufen",
+    "exampleLabel": "2025/45",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "enumerationRules": [
+                {
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "units": 1,
+                                "index": 0
+                            }
+                        ]
+                    },
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+        },
+        "recurrence": {
+            "issues": "2",
+            "period": 1,
+            "timeUnit": {
+                "value": "month"
+            },
+            "rules": [
+                {
+                    "pattern": {
+                        "day": "1"
+                    },
+                    "ordinal": 1,
+                    "patternType": "month_date"
+                },
+                {
+                    "pattern": {
+                        "day": "15"
+                    },
+                    "ordinal": 1,
+                    "patternType": "month_date"
+                }
+            ]
+        },
+        "patternType": "month_date"
+    }
+}

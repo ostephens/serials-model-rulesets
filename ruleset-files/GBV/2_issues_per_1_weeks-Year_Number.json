@@ -1,0 +1,74 @@
+{
+    "name": "wöchentlich - Jahr / Nummer: 104 Hefte pro Jahr",
+    "description": "104x im Jahr (zweimal pro Woche), zwei Stufen",
+    "exampleLabel": "2025/45",
+    "modelRulesetStatus": "Active",
+    "serialRuleset": {
+        "rulesetStatus": {
+            "value": "active"
+        },
+        "recurrence": {
+            "timeUnit": {
+                "value": "week"
+            },
+            "period": "1",
+            "issues": "2",
+            "rules": [
+                {
+                    "pattern": {
+                        "weekday": {
+                            "value": "monday"
+                        }
+                    },
+                    "ordinal": "1",
+                    "patternType": "week"
+                },
+                {
+                    "pattern": {
+                        "weekday": {
+                            "value": "thursday"
+                        }
+                    },
+                    "ordinal": "1",
+                    "patternType": "week"
+                }
+            ]
+        },
+        "patternType": "week",
+        "templateConfig": {
+            "chronologyRules": [
+                {
+                    "ruleLocale": "en",
+                    "templateMetadataRuleFormat": "chronology_year",
+                    "ruleFormat": {
+                        "yearFormat": {
+                            "value": "full"
+                        }
+                    },
+                    "index": 0
+                }
+            ],
+            "templateString": "{{chronology1.year}}/{{enumeration1.level1}}",
+            "enumerationRules": [
+                {
+                    "templateMetadataRuleFormat": "enumeration_numeric",
+                    "ruleFormat": {
+                        "levels": [
+                            {
+                                "units": "1",
+                                "format": {
+                                    "value": "number"
+                                },
+                                "sequence": {
+                                    "value": "continuous"
+                                },
+                                "index": 0
+                            }
+                        ]
+                    },
+                    "index": 0
+                }
+            ]
+        }
+    }
+}
