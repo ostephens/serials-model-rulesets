@@ -1,6 +1,6 @@
 {
-    "name": "vierteljährlich - Jahr / Band/ Nummer: 4 Hefte pro Jahr",
-    "description": "4x im Jahr, drei Stufen",
+    "name": "monatlich - Jahr / Band/ Nummer: 4 Hefte pro Jahr",
+    "description": "4x im Jahr (quartalsweise), drei Stufen",
     "exampleLabel": "2025/45/1",
     "modelRulesetStatus": "Active",
     "serialRuleset": {

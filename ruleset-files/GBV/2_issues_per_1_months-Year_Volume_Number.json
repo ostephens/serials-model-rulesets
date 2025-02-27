@@ -1,6 +1,6 @@
 {
-    "name": "zweimal pro Monat - Jahr / Band / Nummer: 24 Hefte pro Jahr",
-    "description": "24x im Jahr, drei Stufen",
+    "name": "wöchentlich - Jahr / Band / Nummer: 24 Hefte pro Jahr",
+    "description": "24x im Jahr (zweimal pro Monat), drei Stufen",
     "exampleLabel": "2025/45/1",
     "modelRulesetStatus": "Active",
     "serialRuleset": {

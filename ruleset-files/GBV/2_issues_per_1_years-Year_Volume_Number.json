@@ -1,6 +1,6 @@
 {
-    "name": "halbjährlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
-    "description": "2x im Jahr, drei Stufen",
+    "name": "monatlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
+    "description": "2x im Jahr (halbjährlich), drei Stufen",
     "exampleLabel": "2025/45",
     "modelRulesetStatus": "Active",
     "serialRuleset": {
