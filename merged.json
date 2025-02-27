@@ -141,9 +141,70 @@
         }
     },
     {
+        "name": "t\u00e4glich - Jahr / Nummer: 365 Hefte pro Jahr",
+        "description": "365x im Jahr, zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "day"
+                },
+                "period": "1",
+                "issues": "1",
+                "rules": [
+                    {
+                        "pattern": {},
+                        "ordinal": "1",
+                        "patternType": "day"
+                    }
+                ]
+            },
+            "patternType": "day",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}",
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "index": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
         "name": "monatlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
         "description": "2x im Jahr (halbj\u00e4hrlich), drei Stufen",
-        "exampleLabel": "2025/45",
+        "exampleLabel": "2025/45/1",
         "modelRulesetStatus": "Active",
         "serialRuleset": {
             "patternType": "year_date",
@@ -542,6 +603,82 @@
         }
     },
     {
+        "name": "monatlich - Jahr / Nummer: 2 Hefte pro Jahr",
+        "description": "2x im Jahr (halbj\u00e4hrlich), zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "patternType": "year_date",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleLocale": "en",
+                        "index": 0
+                    }
+                ],
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "index": 1
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+            },
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "year"
+                },
+                "period": "1",
+                "rules": [
+                    {
+                        "pattern": {
+                            "day": "1",
+                            "month": {
+                                "value": "january"
+                            }
+                        },
+                        "ordinal": 1,
+                        "patternType": "year_date"
+                    },
+                    {
+                        "pattern": {
+                            "day": "1",
+                            "month": {
+                                "value": "july"
+                            }
+                        },
+                        "ordinal": 1,
+                        "patternType": "year_date"
+                    }
+                ],
+                "issues": "2"
+            }
+        }
+    },
+    {
         "name": "monatlich - Jahr / Band: 4 Hefte pro Jahr",
         "description": "4x im Jahr (quartalsweise), zwei Stufen",
         "exampleLabel": "2025/45",
@@ -597,6 +734,76 @@
                             "day": "1"
                         },
                         "ordinal": "1",
+                        "patternType": "month_date"
+                    }
+                ]
+            },
+            "patternType": "month_date"
+        }
+    },
+    {
+        "name": "w\u00f6chentlich - Jahr / Nummer: 24 Hefte pro Jahr",
+        "description": "24x im Jahr (zweimal pro Monat), zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "enumerationRules": [
+                    {
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "units": 1,
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+            },
+            "recurrence": {
+                "issues": "2",
+                "period": 1,
+                "timeUnit": {
+                    "value": "month"
+                },
+                "rules": [
+                    {
+                        "pattern": {
+                            "day": "1"
+                        },
+                        "ordinal": 1,
+                        "patternType": "month_date"
+                    },
+                    {
+                        "pattern": {
+                            "day": "15"
+                        },
+                        "ordinal": 1,
                         "patternType": "month_date"
                     }
                 ]
@@ -1054,6 +1261,134 @@
         }
     },
     {
+        "name": "monatlich - Jahr / Nummer: 6 Hefte pro Jahr",
+        "description": "6x im Jahr (zweimonatlich), zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "enumerationRules": [
+                    {
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "units": 1,
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "month"
+                },
+                "period": "2",
+                "issues": "1",
+                "rules": [
+                    {
+                        "pattern": {
+                            "day": "1"
+                        },
+                        "ordinal": "1",
+                        "patternType": "month_date"
+                    }
+                ]
+            },
+            "patternType": "month_date"
+        }
+    },
+    {
+        "name": "w\u00f6chentlich - Jahr / Nummer: 26 Hefte pro Jahr",
+        "description": "26x im Jahr (zweiw\u00f6chentlich), zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "week"
+                },
+                "period": "2",
+                "issues": "1",
+                "rules": [
+                    {
+                        "pattern": {
+                            "weekday": {
+                                "value": "monday"
+                            }
+                        },
+                        "ordinal": "1",
+                        "patternType": "week"
+                    }
+                ]
+            },
+            "patternType": "week",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}",
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "index": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
         "name": "j\u00e4hrlich - Jahr jedes 2. Jahr",
         "description": "1x alle 2 Jahre, eine Stufe",
         "exampleLabel": "2025",
@@ -1096,6 +1431,166 @@
                     }
                 ],
                 "issues": "1"
+            }
+        }
+    },
+    {
+        "name": "w\u00f6chentlich - Jahr / Nummer: 104 Hefte pro Jahr",
+        "description": "104x im Jahr (zweimal pro Woche), zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "week"
+                },
+                "period": "1",
+                "issues": "2",
+                "rules": [
+                    {
+                        "pattern": {
+                            "weekday": {
+                                "value": "monday"
+                            }
+                        },
+                        "ordinal": "1",
+                        "patternType": "week"
+                    },
+                    {
+                        "pattern": {
+                            "weekday": {
+                                "value": "thursday"
+                            }
+                        },
+                        "ordinal": "1",
+                        "patternType": "week"
+                    }
+                ]
+            },
+            "patternType": "week",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}",
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "index": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "name": "monatlich - Jahr / Nummer: 3 Hefte pro Jahr",
+        "description": "3x im Jahr, zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "patternType": "year_date",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleLocale": "en",
+                        "index": 0
+                    }
+                ],
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
+                                }
+                            ]
+                        },
+                        "index": 1
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}"
+            },
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "year"
+                },
+                "period": "1",
+                "rules": [
+                    {
+                        "pattern": {
+                            "day": "1",
+                            "month": {
+                                "value": "april"
+                            }
+                        },
+                        "ordinal": 1,
+                        "patternType": "year_date"
+                    },
+                    {
+                        "pattern": {
+                            "day": "1",
+                            "month": {
+                                "value": "july"
+                            }
+                        },
+                        "ordinal": 1,
+                        "patternType": "year_date"
+                    },
+                    {
+                        "pattern": {
+                            "day": "1",
+                            "month": {
+                                "value": "november"
+                            }
+                        },
+                        "ordinal": 1,
+                        "patternType": "year_date"
+                    }
+                ],
+                "issues": "3"
             }
         }
     },
@@ -1238,6 +1733,71 @@
                                         "value": "reset"
                                     },
                                     "index": 1
+                                }
+                            ]
+                        },
+                        "index": 0
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "name": "w\u00f6chentlich - Jahr / Nummer: 52 Hefte pro Jahr",
+        "description": "52x im Jahr, zwei Stufen",
+        "exampleLabel": "2025/45",
+        "modelRulesetStatus": "Active",
+        "serialRuleset": {
+            "rulesetStatus": {
+                "value": "active"
+            },
+            "recurrence": {
+                "timeUnit": {
+                    "value": "week"
+                },
+                "period": "1",
+                "issues": "1",
+                "rules": [
+                    {
+                        "pattern": {
+                            "weekday": {
+                                "value": "monday"
+                            }
+                        },
+                        "ordinal": "1",
+                        "patternType": "week"
+                    }
+                ]
+            },
+            "patternType": "week",
+            "templateConfig": {
+                "chronologyRules": [
+                    {
+                        "ruleLocale": "en",
+                        "templateMetadataRuleFormat": "chronology_year",
+                        "ruleFormat": {
+                            "yearFormat": {
+                                "value": "full"
+                            }
+                        },
+                        "index": 0
+                    }
+                ],
+                "templateString": "{{chronology1.year}}/{{enumeration1.level1}}",
+                "enumerationRules": [
+                    {
+                        "templateMetadataRuleFormat": "enumeration_numeric",
+                        "ruleFormat": {
+                            "levels": [
+                                {
+                                    "units": "1",
+                                    "format": {
+                                        "value": "number"
+                                    },
+                                    "sequence": {
+                                        "value": "continuous"
+                                    },
+                                    "index": 0
                                 }
                             ]
                         },
