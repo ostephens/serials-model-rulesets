@@ -1,6 +1,6 @@
 [
     {
-        "name": "j\u00e4hrlich - Jahr / Nummer jedes 3. Jahr",
+        "name": "26 - j\u00e4hrlich - Jahr / Nummer jedes 3. Jahr",
         "description": "1x alle 3 Jahre, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -66,7 +66,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Band / Nummer: 26 Hefte pro Jahr",
+        "name": "17 - w\u00f6chentlich - Jahr / Band / Nummer: 26 Hefte pro Jahr",
         "description": "26x im Jahr (zweiw\u00f6chentlich), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -141,7 +141,7 @@
         }
     },
     {
-        "name": "t\u00e4glich - Jahr / Nummer: 365 Hefte pro Jahr",
+        "name": "22 - t\u00e4glich - Jahr / Nummer: 365 Hefte pro Jahr",
         "description": "365x im Jahr, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -202,7 +202,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
+        "name": "09 - monatlich - Jahr / Band/ Nummer: 2 Hefte pro Jahr",
         "description": "2x im Jahr (halbj\u00e4hrlich), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -288,7 +288,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band / Nummer: 12 Hefte pro Jahr",
+        "name": "01 - monatlich - Jahr / Band / Nummer: 12 Hefte pro Jahr",
         "description": "12x im Jahr, drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -361,7 +361,7 @@
         }
     },
     {
-        "name": "j\u00e4hrlich - Jahr / Nummer jedes 1. Jahr",
+        "name": "08 - j\u00e4hrlich - Jahr / Nummer jedes 1. Jahr",
         "description": "1x im Jahr, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -427,7 +427,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Band / Nummer: 24 Hefte pro Jahr",
+        "name": "13 - w\u00f6chentlich - Jahr / Band / Nummer: 24 Hefte pro Jahr",
         "description": "24x im Jahr (zweimal pro Monat), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -507,7 +507,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band/ Nummer: 3 Hefte pro Jahr",
+        "name": "11 - monatlich - Jahr / Band/ Nummer: 3 Hefte pro Jahr",
         "description": "3x im Jahr, drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -603,7 +603,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Nummer: 2 Hefte pro Jahr",
+        "name": "10 - monatlich - Jahr / Nummer: 2 Hefte pro Jahr",
         "description": "2x im Jahr (halbj\u00e4hrlich), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -679,7 +679,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band: 4 Hefte pro Jahr",
+        "name": "04 - monatlich - Jahr / Band: 4 Hefte pro Jahr",
         "description": "4x im Jahr (quartalsweise), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -742,7 +742,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Nummer: 24 Hefte pro Jahr",
+        "name": "14 - w\u00f6chentlich - Jahr / Nummer: 24 Hefte pro Jahr",
         "description": "24x im Jahr (zweimal pro Monat), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -812,7 +812,7 @@
         }
     },
     {
-        "name": "j\u00e4hrlich - Jahr jedes 1. Jahr",
+        "name": "07 - j\u00e4hrlich - Jahr jedes 1. Jahr",
         "description": "1x im Jahr, eine Stufe",
         "exampleLabel": "2025",
         "modelRulesetStatus": "Active",
@@ -858,7 +858,7 @@
         }
     },
     {
-        "name": "j\u00e4hrlich - Jahr / Nummer jedes 2. Jahr",
+        "name": "24 - j\u00e4hrlich - Jahr / Nummer jedes 2. Jahr",
         "description": "1x alle 2 Jahre, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -924,7 +924,7 @@
         }
     },
     {
-        "name": "t\u00e4glich - Jahr / Band / Nummer: 365 Hefte pro Jahr",
+        "name": "21 - t\u00e4glich - Jahr / Band / Nummer: 365 Hefte pro Jahr",
         "description": "365x im Jahr, drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -995,7 +995,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Band / Nummer: 104 Hefte pro Jahr",
+        "name": "19 - w\u00f6chentlich - Jahr / Band / Nummer: 104 Hefte pro Jahr",
         "description": "104x im Jahr (zweimal pro Woche), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -1079,7 +1079,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band/ Nummer: 4 Hefte pro Jahr",
+        "name": "03 - monatlich - Jahr / Band/ Nummer: 4 Hefte pro Jahr",
         "description": "4x im Jahr (quartalsweise), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "name": "j\u00e4hrlich - Jahr jedes 3. Jahr",
+        "name": "25 - j\u00e4hrlich - Jahr jedes 3. Jahr",
         "description": "1x alle 3 Jahre, eine Stufe",
         "exampleLabel": "2025",
         "modelRulesetStatus": "Active",
@@ -1198,7 +1198,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band: 12 Hefte pro Jahr",
+        "name": "02 - monatlich - Jahr / Band: 12 Hefte pro Jahr",
         "description": "12x im Jahr, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -1261,7 +1261,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Nummer: 6 Hefte pro Jahr",
+        "name": "06 - monatlich - Jahr / Nummer: 6 Hefte pro Jahr",
         "description": "6x im Jahr (zweimonatlich), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -1324,7 +1324,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Nummer: 26 Hefte pro Jahr",
+        "name": "18 - w\u00f6chentlich - Jahr / Nummer: 26 Hefte pro Jahr",
         "description": "26x im Jahr (zweiw\u00f6chentlich), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -1389,7 +1389,7 @@
         }
     },
     {
-        "name": "j\u00e4hrlich - Jahr jedes 2. Jahr",
+        "name": "23 - j\u00e4hrlich - Jahr jedes 2. Jahr",
         "description": "1x alle 2 Jahre, eine Stufe",
         "exampleLabel": "2025",
         "modelRulesetStatus": "Active",
@@ -1435,7 +1435,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Nummer: 104 Hefte pro Jahr",
+        "name": "20 - w\u00f6chentlich - Jahr / Nummer: 104 Hefte pro Jahr",
         "description": "104x im Jahr (zweimal pro Woche), zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -1509,7 +1509,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Nummer: 3 Hefte pro Jahr",
+        "name": "12 - monatlich - Jahr / Nummer: 3 Hefte pro Jahr",
         "description": "3x im Jahr, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
@@ -1595,7 +1595,7 @@
         }
     },
     {
-        "name": "monatlich - Jahr / Band/ Nummer: 6 Hefte pro Jahr",
+        "name": "05 - monatlich - Jahr / Band/ Nummer: 6 Hefte pro Jahr",
         "description": "6x im Jahr (zweimonatlich), drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -1668,7 +1668,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Band / Nummer: 52 Hefte pro Jahr",
+        "name": "15 - w\u00f6chentlich - Jahr / Band / Nummer: 52 Hefte pro Jahr",
         "description": "52x im Jahr, drei Stufen",
         "exampleLabel": "2025/97/1",
         "modelRulesetStatus": "Active",
@@ -1743,7 +1743,7 @@
         }
     },
     {
-        "name": "w\u00f6chentlich - Jahr / Nummer: 52 Hefte pro Jahr",
+        "name": "16 - w\u00f6chentlich - Jahr / Nummer: 52 Hefte pro Jahr",
         "description": "52x im Jahr, zwei Stufen",
         "exampleLabel": "2025/97",
         "modelRulesetStatus": "Active",
